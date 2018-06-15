@@ -3,11 +3,25 @@
   Go to Link
 {{/link}} --}}
 
-<nav>
+{{!-- <nav>
 </nav>
 <div class="body" style="position: fixed; text-align: center; margin-left: 35%;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/v55lWicUjXs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <div class="">
     {{#link-to "login"}}Ir a login{{/link-to}}
   </div>
-</div>
+</div> --}}
+
+<form class="" action="index.html" method="post">
+  <ul>
+    {{#each tasks as |task|}}
+    <li>
+      <p>Task Number: {{task.taskNumber}}</p>
+      <p>Task Description: {{task.taskDescription}}</p>
+    </li>
+    {{/each}}
+
+    {{input type="text" value=newtask}}
+    <button {{action "addTask" newtask on="click"}}>Add Task</button>
+  </ul>
+  </form>
