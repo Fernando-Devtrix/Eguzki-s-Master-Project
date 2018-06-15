@@ -1,0 +1,44 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    {{!-- <form class="content">
+      <h1>Log inn</h1>
+
+      {{input type="name" value=name}}
+      {{input type="password" value=pass}}
+
+      <button {{action "checkUser" on="click"}}>Log in</button>
+    </form>
+   --}}
+
+<div class="login-center">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+</div>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cerrar al gallo">&times;</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Valent%C3%ADn_Elizalde_al%C3%ADas_%22El_Gallo_De_Oro%22_.jpg/250px-Valent%C3%ADn_Elizalde_al%C3%ADas_%22El_Gallo_De_Oro%22_.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Usuario</b></label>
+
+
+      {{input type="text" name="unname" value=name}}
+      <label for="psw"><b>Contraseña</b></label>
+        {{input type="password" name="password" value=pass }}
+
+      <button type="submit"  {{action "checkUser" on="click"}}>Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordarme
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <span class="psw">Olvidaste tu <a href="#">contraseña?</a></span>
+    </div>
+  </form>
+</div>
